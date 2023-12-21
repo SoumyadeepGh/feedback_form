@@ -176,30 +176,7 @@
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script>
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-        function closeModal() {
-            document.getElementById('thankYouModal').style.display = 'none';
-        }
-		function submitForm() {
-			var form = document.getElementById('feedbackForm');
-			var formData = new FormData(form);
-
-			// Save responses in an object
-			var responses = {};
-			formData.forEach(function(value, key){
-			    responses[key] = value;
-			});
-
-			// Display thank you message along with saved responses
-			document.getElementById('thankYouModal').style.display = 'block';
-
-            // Display thank you message along with saved responses
-            document.getElementById('feedbackResponses').innerText = JSON.stringify(responses, null, 2);
-		}
-	</script>
+	<script src="./js/form.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
